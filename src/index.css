@@ -1,13 +1,117 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  padding: 20px;
+  border-radius: 10px;
+  background: #BBAAAA;
+  color: #ffffff;
+}
+main h1 {
+  margin-bottom: 16px;
+  font-size: 30px;
+  text-align: center;
+}
+main .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+main .info button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+main .board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 360px;
+  height: 360px;
+  row-gap: 6px;
+  column-gap: 6px;
+}
+main .board .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 42px;
+  font-weight: 600;
+  cursor: default;
+}
+main .board .square.c2 {
+  background: #eee;
+  color: #766;
+}
+main .board .square.c4 {
+  background: #eec;
+  color: #766;
+}
+main .board .square.c8 {
+  background: #fb8;
+  color: #ffe;
+}
+main .board .square.c16 {
+  background: #f96;
+  color: #ffe;
+}
+main .board .square.c32 {
+  background: #f75;
+  color: #ffe;
+}
+main .board .square.c64 {
+  background: #f53;
+  color: #ffe;
+}
+main .board .square.c128 {
+  background: #ec7;
+  color: #ffe;
+  font-size: 36px;
+}
+main .board .square.c256 {
+  background: #ec6;
+  font-size: 36px;
+  color: #ffe;
+}
+main .board .square.c512 {
+  background: #ec5;
+  font-size: 36px;
+  color: #ffe;
+}
+main .board .square.c1024 {
+  background: #ec3;
+  font-size: 30px;
+  color: #fff;
+}
+main .board .square.c2048 {
+  background: #ec2;
+  color: #fff;
+  font-size: 30px;
+}
+.ref {
+  margin-top: 20px;
+  color: #000;
+  font-size: 10px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    display: none;
+  }
+  .ref {
+    display: none;
+  }
 }
