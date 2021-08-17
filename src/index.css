@@ -26,6 +26,15 @@ main .info {
   margin-bottom: 10px;
   font-size: 18px;
 }
+main .info div {
+  width: 120px;
+}
+main .info .status {
+  text-align: center;
+}
+main .info .time {
+  text-align: right;
+}
 main .info button {
   background: transparent;
   border: none;

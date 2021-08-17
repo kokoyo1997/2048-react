@@ -21,3 +21,10 @@ export const KEYCODE={
 }
 
 export const SIZE=4;
+
+export const GAMESTATE = {
+	READY: 'ready',
+	RUN: 'run',
+	WIN: 'win',
+	LOSE: 'lose'
+};
